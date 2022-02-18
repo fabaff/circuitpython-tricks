@@ -83,6 +83,7 @@ Table of Contents
 * [Python info](#python-info)
    * [Display which (not built-in) libraries have been imported](#display-which-not-built-in-libraries-have-been-imported)
    * [List names of all global variables](#list-names-of-all-global-variables)
+   * [Display the running CircuitPython release](#display-the-running-circuitpython-release)
 * [Host-side tasks](#host-side-tasks)
    * [Installing CircuitPython libraries](#installing-circuitpython-libraries)
       * [Installing libraries with circup](#installing-libraries-with-circup)
@@ -1152,6 +1153,17 @@ if 'c' in my_globals:
   print("you have a variable named 'c'!")
 ```
 
+### Display the running CircuitPython release
+
+Manually check the `boot_out.txt` file in your CIRCUITPY drive.
+
+```py
+import os
+print(os.uname().release)
+'7.1.1'
+print(os.uname().version)
+'7.1.1 on 2022-01-14'
+```
 
 ## Host-side tasks
 
